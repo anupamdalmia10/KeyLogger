@@ -10,7 +10,7 @@ Compile using g++ and pass the flag -mwindows
 
 ## Current Status
 
-As of now, this keylogger logs all the keys but does not shows keys other than alphabets in readable format
+As of now, this keylogger logs all the keys in readable format.
 
 ## To Do
 
