@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1470773284 source:f:\github\keylogger\main.cpp
+	<iostream>
+	<windows.h>
+	"KeyLog.h"
+
+1470823806 f:\github\keylogger\keylog.h
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"KeyConst.h"
+
+1470823524 f:\github\keylogger\keyconst.h
+	<string>
+	<map>
+

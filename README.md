@@ -14,4 +14,5 @@ As of now, this keylogger logs all the keys but does not shows keys other than a
 
 ## To Do
 
-- Update the code to display all the keys in readable format
+- ~~Update the code to display all the keys in readable format~~
+- Encode the log file so that it can only be read by the desired person

